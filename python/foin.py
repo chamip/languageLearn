@@ -3,7 +3,7 @@ from math import sqrt
 
 def foin():
     sum = 0
-    for x in range(1, 100):
+    for x in range(1, 100 + 1):
         sum += x
     print('sum = ', sum)
     sum1 = 0
@@ -11,9 +11,13 @@ def foin():
         sum1 += x
     print(f'sum1 = {sum1:d}')
     sum2 = 0
-    for x in range(100, 1, -2):
+    for x in range(100, 0, -2):
         sum2 += x
     print('sum2 = %d' % sum2)
+    sum3 = 0
+    for x in range(99, 1, -1):
+        sum3 += x
+    print('sum3 = ', sum3)
 
 def guess():
     answer = random.randint(1, 100)
@@ -98,9 +102,9 @@ def add(*args):
     return total
 
 if __name__ == '__main__':
-    # foin()
+    foin()
     # guess()
-    # multi_loop()
+    multi_loop()
     # isPrime()
     # gcdLcm()
     # printTriangle()
