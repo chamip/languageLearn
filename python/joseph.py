@@ -13,5 +13,6 @@ def josephLoop():
     for person in persons:
         print('基' if person else '非', end='')
 
+
 if __name__ == '__main__':
     josephLoop()
