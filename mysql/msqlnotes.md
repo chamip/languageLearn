@@ -81,7 +81,6 @@ HELP SHOW;
 比如说检索表的某两列，如果某两行的这两列数据完全一样，就会过滤掉其中一行。
 
 <img width="1356" alt="1" src="https://github.com/chamip/languageLearn/assets/42117528/ad881e1b-2af7-4ec6-b801-11bc69eafb76">
-<img width="1202" alt="Screenshot 2023-08-11 at 00 10 40" src="https://github.com/chamip/languageLearn/assets/42117528/3e159d92-b67d-4722-8105-82dc10ab168f">
 
 <img width="742" alt="2" src="https://github.com/chamip/languageLearn/assets/42117528/20a1d8c5-3629-40a2-9e1e-befa714bcc70">
 
@@ -260,7 +259,7 @@ SOUNDEX是一个将任何文本串转换为描述其语音表示的字母数字�
 
 eg: 'Y Lee'和'Y Lie'发音相似
 
-<img width="1202" alt="Screenshot 2023-08-11 at 00 10 40" src="https://github.com/chamip/languageLearn/assets/42117528/97219bba-aa02-4450-9535-95f7071ab89f">
+<img width="1202" alt="4" src="https://github.com/chamip/languageLearn/assets/42117528/97219bba-aa02-4450-9535-95f7071ab89f">
 
 ###### 日期和时间处理函数
 日期和时间采用相应的数据类型和特殊的格式存储，以便能快速和有效地排序或过滤，并且节省物理存储空间。
