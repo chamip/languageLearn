@@ -79,12 +79,16 @@ HELP SHOW;
 就是当检索某列时，去掉重复的要用DISTINCT。
 不能部分使用DISTINCT DISTINCT关键字应用于所有列而不仅是前置它的列。
 比如说检索表的某两列，如果某两行的这两列数据完全一样，就会过滤掉其中一行。
+
 <img width="1356" alt="1" src="https://github.com/chamip/languageLearn/assets/42117528/ad881e1b-2af7-4ec6-b801-11bc69eafb76">
+<img width="1202" alt="Screenshot 2023-08-11 at 00 10 40" src="https://github.com/chamip/languageLearn/assets/42117528/3e159d92-b67d-4722-8105-82dc10ab168f">
+
 <img width="742" alt="2" src="https://github.com/chamip/languageLearn/assets/42117528/20a1d8c5-3629-40a2-9e1e-befa714bcc70">
 
 ###### 限制结果
 为了返回第一行或前几行，可使用LIMIT子句。
 为得出下一个5行，可指定要检索的开始行和行数。第一个数为开始位置，第二个数为要检索的行数。
+
 <img width="711" alt="3" src="https://github.com/chamip/languageLearn/assets/42117528/f06976f0-10b3-441d-815e-6328e556a135">
 
 ###### 使用完全限定的表名
@@ -178,6 +182,7 @@ SELECT语句有一个特殊的WHERE子句，可用来检查具有NULL值的列�
 \或\\? 多数正则表达式实现使用单个反斜杠转义特殊字符，以便能使用这些字符本身。但MySQL要求两个反斜杠（MySQL自己解释一个，正则表达式库解释另一个）。
 
 ##### 匹配字符类
+
 | 类         | 说明                                         |
 | :--------- | :------------------------------------------- |
 | alnum:]    | 任意字母和数字（同[a-zA-Z0-9]）              |
@@ -194,6 +199,7 @@ SELECT语句有一个特殊的WHERE子句，可用来检查具有NULL值的列�
 | [:xdigit:] | 任意十六进制数字（同[a-fA-F0-9]）            |
 
 ##### 重复元字符
+
 | 元字符 | 说明                         |
 | ------ | ---------------------------- |
 | \*     | 0个或多个匹配                |
@@ -204,6 +210,7 @@ SELECT语句有一个特殊的WHERE子句，可用来检查具有NULL值的列�
 | {n,m}  | 匹配数目的范围（m不超过255） |
 
 ##### 定位符
+
 为了匹配特定位置的文本，需要使用定位符。
 | 元字符  | 说明       |
 | ------- | ---------- |
@@ -250,7 +257,10 @@ SELECT语句有一个特殊的WHERE子句，可用来检查具有NULL值的列�
 | Right()     | 返回串右边的字符  |
 
 SOUNDEX是一个将任何文本串转换为描述其语音表示的字母数字模式的算法。SOUNDEX考虑了类似的发音字符和音节，使得能对串进行发音比较而不是字母比较。
+
 eg: 'Y Lee'和'Y Lie'发音相似
+
+<img width="1202" alt="Screenshot 2023-08-11 at 00 10 40" src="https://github.com/chamip/languageLearn/assets/42117528/97219bba-aa02-4450-9535-95f7071ab89f">
 
 ###### 日期和时间处理函数
 日期和时间采用相应的数据类型和特殊的格式存储，以便能快速和有效地排序或过滤，并且节省物理存储空间。
