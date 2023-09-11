@@ -465,5 +465,23 @@ MySQL查询可用于汇总数据，不用把表列实际检索出来，以便分
 
 `LOW_PRIORITY` 当数据检索是主要功能时，可以使用该关键字降低`INSERT`、`UPDATE`、`DELETE`的优先级（跟在`INSERT`后），提高整体性能。
 
+#### （第二十章）更新和删除数据
+- 更新
+
+`UPDATE`：更新特定行或所有行。一般需要跟`WHERE`子句指定特定行，否则更新所有行。
+
+语法形式：```UPDATE tb SET col=xxx WEHRE col1=yyy'
+
+`IGNORE`：一般更新多行的时候发生错误整个`UPDATE`操作会取消，发生错误前更新的行会恢复到原来的值，如果希望发生错误继续更新可以使用`UPDATE IGNORE tb...`
+
+若想删除某列的值，可以设置为`NULL`（该列允许控制）
+
+- 删除
+
+`DELETE`：和UPDATE类似。
+
+语法形式：`DELETE FROM tb WHERE col=xxx`
+
+更快的删除整个表的数据（不删除表本身）：`TRUNCATE tb`，实质是删除表本身然后重建。
 
 
