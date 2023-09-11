@@ -525,3 +525,43 @@ MySQL查询可用于汇总数据，不用把表列实际检索出来，以便分
 
 `RENAME tb1 TO tb2`
 
+#### （第二十二章）使用视图
+视图是虚拟的表，包含的不是数据而是根据需要检索数据的查询。视图可用来简化数据处理、重新格式化基础数据或保护基础数据。
+
+- 为什么使用视图
+1. 重用SQL语句
+2. 简化复杂的SQL操作。编写查询后，方便地重用它而不必知道基本细节。
+3. 使用表的组成部分而不是整个表
+4. 保护数据。可以给用户授予表的特定部分的访问权限而不是整个表的访问权限。
+5. 更改数据格式和表示。可返回与底层表的数据和格式不同的数据。
+
+- 使用视图
+
+`CREATE VIEW viewname AS SELECT...`
+
+`SHOW CREATE VIEW viewname`
+
+`DROP VIEW viewname`
+
+更新视图：可以先`DROP`再`CREATE`，或者用`CREATE OR REPLACE VIEW`
+
+- 简化复杂的联结
+
+<img width="594" alt="6" src="https://github.com/chamip/languageLearn/assets/42117528/79741ea1-21fa-4b81-b1db-5cae988e22b5">
+
+<img width="487" alt="7" src="https://github.com/chamip/languageLearn/assets/42117528/1cc2ecb4-26fc-4c08-b3e7-d5c1f4eb179e">
+
+- 用视图重新格式化检索的数据
+
+<img width="638" alt="8" src="https://github.com/chamip/languageLearn/assets/42117528/465bf627-fbcf-455d-8723-9a8ac0b0963e">
+
+- 用视图过滤不想要的数据
+
+<img width="638" alt="9" src="https://github.com/chamip/languageLearn/assets/42117528/56fb044d-f150-4c16-858f-7119893e2c1a">
+
+- 使用视图与计算字段
+
+<img width="902" alt="10" src="https://github.com/chamip/languageLearn/assets/42117528/60df1b52-2462-4198-9c1e-927216baf3f1">
+
+**将视图用于检索**   一般，应该将视图用于检索（SELECT语句）而不用于更新（INSERT、UPDATE和DELETE）。
+
