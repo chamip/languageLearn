@@ -610,3 +610,18 @@ drop procedure if exists pcname();
 ```
 
 即使没有对应存储过程也不会报错。
+
+#### （第二十四章）使用游标
+游标（cursor）是一个存储在MySQL服务器上的数据库查询，它不是一条SELECT语句，而是被该语句检索出来的结果集。在存储了游标之后，应用程序可以根据需要滚动或浏览其中的数据。比如取第一行、下一行、所有行或者重复同一行等。
+
+游标主要用于交互式应用，其中用户需要滚动屏幕上的数据，并对数据进行浏览或做出更改。
+
+不像多数DBMS，MySQL游标只能用于存储过程（和函数）。
+
+eg（使用游标取第一/单个行）：
+
+<img width="588" alt="11" src="https://github.com/chamip/languageLearn/assets/42117528/0334e425-4838-493e-b32b-98fc3dc169b9">
+
+游标有关的关键字：repeat/until、handler、sqlstate '02000'(未找到)等
+
+
