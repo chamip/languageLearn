@@ -624,4 +624,6 @@ eg（使用游标取第一/单个行）：
 
 游标有关的关键字：repeat/until、handler、sqlstate '02000'(未找到)等
 
+#### （第二十五章）使用触发器
+触发器是MySQL响应以下任意语句而自动执行的一条MySQL语句（或位于BEGIN和END语句之间的一组语句）：`INSERT`、`DELETE`、`UPDATE`
 
