@@ -642,3 +642,5 @@ eg（使用游标取第一/单个行）：
 
 **保留点（savepoint）** 指事务处理中设置的临时占位符，可以对它进行发布回退
 
+<img width="920" alt="12" src="https://github.com/chamip/languageLearn/assets/42117528/ad49fd6a-1eb6-4ee5-b780-77699f952727">
+
