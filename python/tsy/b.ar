@@ -1,0 +1,180 @@
+hdu = fits.open("C:/Users/d2020/Desktop/test/1124A/CPB/FRB20201124A_2021MayApr_0001.ar")
+
+hdu.info()
+Filename: C:/Users/d2020/Desktop/test/1124A/CPB/FRB20201124A_2021MayApr_0001.ar
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU      64   ()      
+  1  HISTORY       1 BinTableHDU     74   8R x 29C   [24A, 256A, 8A, 8A, 1J, 1I, 1I, 1I, 1D, 1D, 1J, 1D, 1D, 1D, 1D, 1I, 1I, 1I, 1I, 1I, 32A, 32A, 32A, 256A, 32A, 32A, 1I, 32A, 1I]   
+  2  PSRPARAM      1 BinTableHDU     12   18R x 1C   [128A]   
+  3  T2PREDICT     1 BinTableHDU     12   22R x 1C   [128A]   
+  4  SUBINT        1 BinTableHDU     72   1R x 11C   [1D, 1D, 1D, 1D, 1D, 1D, 512D, 512E, 512E, 512E, 260096I]   
+
+hdu[0].header
+SIMPLE  =                    T / file does conform to FITS standard             
+BITPIX  =                    8 / number of bits per data pixel                  
+NAXIS   =                    0 / number of data axes                            
+EXTEND  =                    T / FITS dataset may contain extensions            
+COMMENT   FITS (Flexible Image Transport System) format is defined in 'Astronomy
+COMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H 
+COMMENT   FITS (Flexible Image Transport System) format defined in Astronomy and
+COMMENT   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365.
+COMMENT   Contact the NASA Science Office of Standards and Technology for the   
+COMMENT   FITS Definition document #100 and other FITS information.             
+HDRVER  = '6.1             '   / Header version                                 
+FITSTYPE= 'PSRFITS         '   / FITS definition for pulsar data files          
+DATE    = '2022-07-18T02:11:00' / File creation date (YYYY-MM-DDThh:mm:ss UTC)  
+OBSERVER= 'Somebody'           / Observer name(s)                               
+PROJID  = 'ZD2020_5'           / Project name                                   
+TELESCOP= 'FAST    '           / Telescope name                                 
+ANT_X   =         -1668546.678 / [m] Antenna ITRF X-coordinate (D)              
+ANT_Y   =          5506833.865 / [m] Antenna ITRF Y-coordinate (D)              
+ANT_Z   =          2744927.446 / [m] Antenna ITRF Z-coordinate (D)              
+FRONTEND= '19BEAM  '           / Receiver ID                                    
+IBEAM   = '0       '           / Beam ID for multibeam systems                  
+NRCVR   =                    2 / Number of receiver polarisation channels       
+FD_POLN = 'LIN     '           / LIN or CIRC                                    
+FD_HAND =                    1 / +/- 1. +1 is LIN:A=X,B=Y, CIRC:A=L,B=R (I)     
+FD_SANG =                   0. / [deg] FA of E vect for equal sig in A&B (E)    
+FD_XYPH =                   0. / [deg] Phase of A^* B for injected cal (E)      
+BACKEND = 'MB4K    '           / Backend ID                                     
+BECONFIG= 'N/A     '           / Backend configuration file name                
+BE_PHASE=                    1 / 0/+1/-1 BE cross-phase:0 unknown,+/-1 std/rev  
+BE_DCC  =                    0 / 0/1 BE downconversion conjugation corrected    
+BE_DELAY=                   0. / [s] Backend propn delay from digitiser input   
+TCYCLE  =                   0. / [s] On-line cycle time (D)                     
+OBS_MODE= 'PSR     '           / (PSR, CAL, SEARCH)                             
+DATE-OBS= '2021-04-03T07:52:50.678' / Date of observation (YYYY-MM-DDThh:mm:ss U
+OBSFREQ =                1250. / [MHz] Centre frequency for observation         
+OBSBW   =                 500. / [MHz] Bandwidth for observation                
+OBSNCHAN=                 4096 / Number of frequency channels (original)        
+CHAN_DM =                   0. / [cm-3 pc] DM used for on-line dedispersion     
+PNT_ID  = '0       '           / Name or ID for pointing ctr (multibeam feeds)  
+SRC_NAME= 'FRB20201124A'       / Source or scan ID                              
+COORD_MD= 'J2000   '           / Coordinate mode (J2000, GALACTIC, ECLIPTIC)    
+EQUINOX =                2000. / Equinox of coords (e.g. 2000.0)                
+RA      = '05:08:03.508'       / Right ascension (hh:mm:ss.ssss)                
+DEC     = '+26:03:38.504'      / Declination (-dd:mm:ss.sss)                    
+BMAJ    =                   0. / [deg] Beam major axis length                   
+BMIN    =                   0. / [deg] Beam minor axis length                   
+BPA     =                   0. / [deg] Beam position angle                      
+STT_CRD1= '05:08:03.5077'      / Start coord 1 (hh:mm:ss.sss or ddd.ddd)        
+STT_CRD2= '+26:03:38.504'      / Start coord 2 (-dd:mm:ss.sss or -dd.ddd)       
+TRK_MODE= 'TRACK   '           / Track mode (TRACK, SCANGC, SCANLAT)            
+STP_CRD1= '05:08:03.5077'      / Stop coord 1 (hh:mm:ss.sss or ddd.ddd)         
+STP_CRD2= '+26:03:38.504'      / Stop coord 2 (-dd:mm:ss.sss or -dd.ddd)        
+SCANLEN = '*       '           / [s] Requested scan length (E)                  
+FD_MODE = 'FA      '           / Feed track mode - FA, CPA, SPA, TPA            
+FA_REQ  =                   0. / [deg] Feed/Posn angle requested (E)            
+CAL_MODE= '                '   / Cal mode (OFF, SYNC, EXT1, EXT2)               
+CAL_FREQ= '*       '           / [Hz] Cal modulation frequency (E)              
+CAL_DCYC= '*       '           / Cal duty cycle (E)                             
+CAL_PHS = '*       '           / Cal phase (wrt start time) (E)                 
+CAL_NPHS= '*       '           / Number of states in cal pulse (I)              
+STT_IMJD=                59307 / Start MJD (UTC days) (J - long integer)        
+STT_SMJD=                29024 / [s] Start time (sec past UTC 00h) (J)          
+STT_OFFS=          0.291469824 / [s] Start time offset (D)                      
+STT_LST =                   0. / [s] Start LST (D)
+
+hdu[1].header
+XTENSION= 'BINTABLE'           / ***** Processing history *****                 
+BITPIX  =                    8 / N/A                                            
+NAXIS   =                    2 / 2-dimensional binary table                     
+NAXIS1  =                  820 / width of table in bytes                        
+NAXIS2  =                    8 / number of rows                                 
+PCOUNT  =                    0 / size of special data area                      
+GCOUNT  =                    1 / one data group (required keyword)              
+TFIELDS =                   29 / number of fields per row                       
+TTYPE1  = 'DATE_PRO'           / Processing date and time (UTC)                 
+TFORM1  = '24A     '           / 24-char string                                 
+TTYPE2  = 'PROC_CMD'           / Processing program and command                 
+TFORM2  = '256A    '           / 256-char string                                
+TTYPE3  = 'SCALE   '           / Units (FluxDen/RefFlux/Jansky)                 
+TFORM3  = '8A      '           / 8-char string                                  
+TTYPE4  = 'POL_TYPE'           / Polarisation identifier                        
+TFORM4  = '8A      '           / 8-char string                                  
+TTYPE5  = 'NSUB    '           / Number of Sub-Integrations                     
+TFORM5  = '1J      '           / Long integer                                   
+TTYPE6  = 'NPOL    '           / Number of polarisations                        
+TFORM6  = '1I      '           / Integer                                        
+TTYPE7  = 'NBIN    '           / Nr of bins per product (0 for SEARCH mode)     
+TFORM7  = '1I      '           / Integer                                        
+TTYPE8  = 'NBIN_PRD'           / Nr of bins per period                          
+TFORM8  = '1I      '           / Integer                                        
+TTYPE9  = 'TBIN    '           / Time per bin or sample                         
+TFORM9  = '1D      '           / Double                                         
+TTYPE10 = 'CTR_FREQ'           / Band centre frequency (weighted)               
+TFORM10 = '1D      '           / Double                                         
+TTYPE11 = 'NCHAN   '           / Number of frequency channels                   
+TFORM11 = '1J      '           / Long integer                                   
+TTYPE12 = 'CHAN_BW '           / Channel bandwidth                              
+TFORM12 = '1D      '           / Double                                         
+TTYPE13 = 'REF_FREQ'           / Reference frequency                            
+TFORM13 = '1D      '           / Double                                         
+TTYPE14 = 'DM      '           / DM used for dedispersion                       
+TFORM14 = '1D      '           / Double                                         
+TTYPE15 = 'RM      '           / RM used for RM correction                      
+TFORM15 = '1D      '           / Double                                         
+TTYPE16 = 'PR_CORR '           / Projection of receptors onto sky corrected     
+TFORM16 = '1I      '           / Integer flag                                   
+TTYPE17 = 'FD_CORR '           / Feed basis correction applied                  
+TFORM17 = '1I      '           / Integer flag                                   
+TTYPE18 = 'BE_CORR '           / Backend correction applied                     
+TFORM18 = '1I      '           / Integer flag                                   
+TTYPE19 = 'RM_CORR '           / RM correction applied                          
+TFORM19 = '1I      '           / Integer flag                                   
+TTYPE20 = 'DEDISP  '           / Data dedispersed                               
+TFORM20 = '1I      '           / Integer flag                                   
+TTYPE21 = 'DDS_MTHD'           / Dedispersion method                            
+TFORM21 = '32A     '           / 32-char string                                 
+TTYPE22 = 'SC_MTHD '           / Scattered power correction method              
+TFORM22 = '32A     '           / 32-char string                                 
+TTYPE23 = 'CAL_MTHD'           / Calibration method                             
+TFORM23 = '32A     '           / 32-char string                                 
+TTYPE24 = 'CAL_FILE'           / Name of gain calibration file                  
+TFORM24 = '256A    '           / 256-char string                                
+TTYPE25 = 'RFI_MTHD'           / RFI excision method                            
+TFORM25 = '32A     '           / 32-char string                                 
+TTYPE26 = 'RM_MODEL'           / Auxiliary Faraday rotation model description   
+TFORM26 = '32A     '           / 32-char string                                 
+TTYPE27 = 'AUX_RM_C'           / Auxiliary Faraday rotation corrected flag      
+TFORM27 = '1I      '           / Integer flag                                   
+TTYPE28 = 'DM_MODEL'           / Auxiliary dispersion model description         
+TFORM28 = '32A     '           / 32-char string                                 
+TTYPE29 = 'AUX_DM_C'           / Auxiliary dispersion corrected flag            
+TFORM29 = '1I      '           / Integer flag                                   
+EXTNAME = 'HISTORY '           / name of this binary table extension            
+TUNIT9  = 's       '           / units of field                                 
+TUNIT10 = 'MHz     '           / units of field                                 
+TUNIT12 = 'MHz     '           / units of field                                 
+TUNIT13 = 'MHz     '           / units of field                                 
+TUNIT14 = 'CM-3    '                                                            
+TUNIT15 = 'RAD     '                                                            
+EXTVER  =                    1 / auto assigned by template parser               
+
+hdu[2].header
+XTENSION= 'BINTABLE'           / ***** Pulsar ephemeris *****                   
+BITPIX  =                    8 / N/A                                            
+NAXIS   =                    2 / 2-dimensional binary table                     
+NAXIS1  =                  128 / width of table in bytes                        
+NAXIS2  =                   18 / number of rows in table                        
+PCOUNT  =                    0 / size of special data area                      
+GCOUNT  =                    1 / one data group (required keyword)              
+TFIELDS =                    1 / Number of fields per row                       
+TTYPE1  = 'PARAM   '           / Text file stored row by row                    
+TFORM1  = '128A    '           / Allow 128 char per row                         
+EXTNAME = 'PSRPARAM'           / Name of this binary table extension            
+EXTVER  =                    1 / auto assigned by template parser               
+
+hdu[3].header
+XTENSION= 'BINTABLE'           / ***** Tempo2 Predictor *****                   
+BITPIX  =                    8 / N/A                                            
+NAXIS   =                    2 / 2-dimensional binary table                     
+NAXIS1  =                  128 / width of table in bytes                        
+NAXIS2  =                   22 / number of rows in table                        
+PCOUNT  =                    0 / size of special data area                      
+GCOUNT  =                    1 / one data group (required keyword)              
+TFIELDS =                    1 / Number of fields per row                       
+TTYPE1  = 'PREDICT '           / Text file stored row by row                    
+TFORM1  = '128A    '           / Allow 128 char per row                         
+EXTNAME = 'T2PREDICT'          / Name of this binary table extension            
+EXTVER  =                    1 / auto assigned by template parser               
